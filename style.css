@@ -91,3 +91,21 @@
   font-weight: 500;
   font-size: medium;
 }
+
+/* FOOTER */
+
+.footer-section {
+  background-color: aquamarine;
+  width: auto;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
