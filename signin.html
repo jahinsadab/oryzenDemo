@@ -26,43 +26,33 @@
       <nav class="navbar navbar-expand-xl oryzen-navbar">
         <div class="container-fluid px-xl-4">
           <!-- Mobile Header -->
-          <header class="mobile-header d-lg-none sticky-top">
-            <nav class="navbar bg-white">
-              <div class="container-fluid">
-                <!-- Left -->
+          <div class="mobile-header d-xl-none">
+            <!-- Hamburger -->
+            <button
+              class="btn mobile-menu-btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <i class="bi bi-list"></i>
+            </button>
 
-                <button
-                  class="btn nav-icon"
-                  type="button"
-                  data-bs-toggle="offcanvas"
-                  data-bs-target="#mobileMenu"
-                >
-                  <i class="bi bi-list"></i>
-                </button>
+            <!-- Logo -->
+            <a href="home.html" class="mobile-logo">
+              <img src="/pics/logo.png" alt="" />
+            </a>
 
-                <!-- Center Logo -->
+            <!-- Icons -->
+            <div class="mobile-icons">
+              <a href="#">
+                <i class="bi bi-search"></i>
+              </a>
 
-                <a href="#" class="navbar-brand mx-auto logo">
-                  <!-- Logo Icon -->
-                  <i class="bi bi-lightning-charge-fill logo-icon"></i>
-
-                  <span>FABRI</span><small>LIFE</small>
-                </a>
-
-                <!-- Right -->
-
-                <div class="d-flex align-items-center gap-2">
-                  <button class="btn nav-icon">
-                    <i class="bi bi-search"></i>
-                  </button>
-
-                  <button class="btn nav-icon">
-                    <i class="bi bi-heart"></i>
-                  </button>
-                </div>
-              </div>
-            </nav>
-          </header>
+              <a href="#">
+                <i class="bi bi-heart"></i>
+              </a>
+            </div>
+          </div>
 
           <!-- Logo -->
           <a class="desktop-navbar navbar-brand" href="home.html">
@@ -645,7 +635,7 @@
                   <div class="welcome">
                     <p>Welcome</p>
 
-                    <a href="signin.html">Sign in</a>
+                    <a href="#">Sign in</a>
                     /
                     <a href="#">Sign up</a>
                   </div>
@@ -682,380 +672,72 @@
           </div>
         </div>
       </nav>
-
-      <!-- Mobile Bottom Navigation -->
-      <nav class="mobile-bottom-nav d-lg-none">
-        <a href="home.html" class="nav-item">
-          <i class="bi bi-house-door"></i>
-          <span>Home</span>
-        </a>
-
-        <a href="category.html" class="nav-item">
-          <i class="bi bi-grid"></i>
-          <span>Category</span>
-        </a>
-
-        <a href="cart.html" class="nav-item">
-          <div class="position-relative">
-            <i class="bi bi-cart3"></i>
-
-            <span class="cart-badge">3</span>
-          </div>
-
-          <span>Cart</span>
-        </a>
-
-        <a href="chat.html" class="nav-item active">
-          <i class="bi bi-chat"></i>
-          <span>Chat</span>
-        </a>
-
-        <a href="signin.html" class="nav-item">
-          <i class="bi bi-person"></i>
-          <span>Login</span>
-        </a>
-      </nav>
     </section>
 
-    <section class="hero-section mb-3">
-      <a href="shop.html" class="hero-banner">
-        <img src="pics/hero banner.png" alt="Promotional Banner" />
-      </a>
-    </section>
+    <section class="sign-in-page">
+      <div class="container p-0">
+        <div class="row g-0 min-vh-100">
+          <!-- Left Side -->
+          <div
+            class="col-lg-6 d-flex align-items-center justify-content-center"
+          >
+            <div class="login-box">
+              <h1 class="fw-bold mb-2">Welcome Back</h1>
 
-    <section class="promo-section mb-3">
-      <div class="promo-bar">
-        <a href="#" class="promo-item"> SHOP NOW </a>
+              <p class="text-secondary mb-5">
+                Sign in to continue to your account
+              </p>
 
-        <a href="#" class="promo-item"> MEN </a>
+              <!-- Phone Login -->
 
-        <a href="#" class="promo-item"> WOMEN </a>
+              <a href="phone_login.html">
+                <button class="btn login-btn w-100 mb-3">
+                  <i class="fa-solid fa-phone me-3"></i>
+                  Login with Phone
+                </button>
+              </a>
 
-        <a href="#" class="promo-item"> KIDS </a>
+              <!-- Email Login -->
 
-        <div class="promo-item promo-text">GET 5% OFF ON APP</div>
+              <a href="email_login.html">
+                <button class="btn login-btn w-100">
+                  <i class="fa-solid fa-envelope me-3"></i>
+                  Login with Email
+                </button>
+              </a>
 
-        <a href="#" class="store-link">
-          <img src="images/google-play.png" alt="Google Play" />
-        </a>
+              <div class="text-center mt-5">
+                <p class="text-muted mb-3">Need help?</p>
 
-        <a href="#" class="store-link">
-          <img src="images/app-store.png" alt="App Store" />
-        </a>
-      </div>
-    </section>
-
-    <section class="home-content container">
-      <div class="arrival-heading text-center mb-3">
-        <h2>NEW ARRIVAL</h2>
-      </div>
-
-      <div class="home-element">
-        <!-- Products Grid -->
-        <div class="row g-3 mb-3">
-          <!-- Item -->
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div class="row g-3 mb-3">
-          <!-- Item -->
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-        </div>
-        <div class="row g-3 mb-3">
-          <!-- Item -->
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-
-          <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-            <a href="#" class="arrival-card">
-              <img src="/pics/sample-1.png" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-element mb-3">
-        <div class="row g-3">
-          <!-- Banner 1 -->
-          <div class="col-12 col-lg-6">
-            <a href="#" class="promo-banner">
-              <img src="/pics/sample-2.png" alt="Official Jersey" />
-            </a>
-          </div>
-
-          <!-- Banner 2 -->
-          <div class="col-12 col-lg-6">
-            <a href="#" class="promo-banner">
-              <img src="/pics/sample-3.png" alt="Fan Made Jersey" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-element mb-3">
-        <div class="row g-3">
-          <!-- Card 1 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <a href="#" class="showcase-card">
-              <img src="/pics/sample-3.png" alt="Printed Short Sleeve" />
-
-              <div class="showcase-overlay">
-                <h3>Printed Short Sleeve</h3>
+                <a href="#" class="forgot-link"> Forgot your password? </a>
               </div>
-            </a>
-          </div>
 
-          <!-- Card 2 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <a href="#" class="showcase-card">
-              <img src="/pics/sample-3.png" alt="Designer Edition" />
+              <hr class="my-5" />
 
-              <div class="showcase-overlay">
-                <h3>Designer Edition</h3>
+              <div class="text-center">
+                <span class="fw-semibold"> Don't have an account? </span>
+
+                <a href="#" class="signup-link"> Create one now </a>
               </div>
-            </a>
-          </div>
 
-          <!-- Card 3 -->
-          <div class="col-12 col-md-6 col-lg-4">
-            <a href="#" class="showcase-card">
-              <img src="/pics/sample-3.png" alt="Short Sleeve Blanks" />
+              <hr class="my-4" />
 
-              <div class="showcase-overlay">
-                <h3>Short Sleeve Blanks</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="home-element mb-3">
-        <div class="row align-items-center">
-          <!-- Content -->
-          <div class="col-lg-7">
-            <div class="brand-content">
-              <h2 class="brand-logo">
-                Oryzen
-                <span class="brand-arrow">›</span>
-              </h2>
-
-              <h3 class="brand-title">
-                Because comfort and confidence go hand in hand.
-              </h3>
-
-              <p>
-                We focus on carefully selecting the best clothing that is
-                comfortable, looks great, and makes you confident. Apart from
-                the fabric, design and fit, we go through strict quality control
-                parameters to give you what you truly deserve. The power of a
-                good outfit is how it can influence your perception of yourself.
+              <p class="small text-muted text-center mb-0">
+                This site is protected by reCAPTCHA and the Google Privacy
+                Policy and Terms of Service apply.
               </p>
             </div>
           </div>
 
-          <!-- Image -->
-          <div class="col-lg-5">
-            <a href="#" class="brand-image">
-              <img src="/pics/hero banner.png" alt="Fabric Collection" />
-            </a>
-          </div>
-        </div>
-      </div>
+          <!-- Right Side -->
 
-      <div class="home-element mb-3">
-        <div class="row g-3">
-          <!-- Featured Product -->
-          <div class="col-lg-4">
-            <a href="#" class="featured-card">
-              <img src="/pics/sample-1.png" alt="Designer Polo" />
-
-              <div class="featured-content">
-                <h2>Designer Polo</h2>
-              </div>
-            </a>
-          </div>
-
-          <!-- Product Grid -->
-          <div class="col-lg-8">
-            <div class="row g-3">
-              <!-- Product -->
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 1140.00</span>
-                    <span class="old-price">৳ 1490.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 1260.00</span>
-                    <span class="old-price">৳ 1600.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 1140.00</span>
-                    <span class="old-price">৳ 1490.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 1090.00</span>
-                    <span class="old-price">৳ 1290.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 750.00</span>
-                    <span class="old-price">৳ 980.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 750.00</span>
-                    <span class="old-price">৳ 980.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-6 col-md-3">
-                <a href="#" class="product-card">
-                  <img src="/pics/sample-4.png" alt="" />
-
-                  <div class="product-price">
-                    <span class="sale-price">৳ 780.00</span>
-                    <span class="old-price">৳ 1490.00</span>
-                  </div>
-                </a>
-              </div>
-
-              <!-- View More Card -->
-              <div class="col-6 col-md-3">
-                <a href="#" class="view-more-card">
-                  <span>VIEW<br />MORE</span>
-                </a>
-              </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <div class="image-side">
+              <img
+                src="/pics/login_pic.png"
+                class="img-fluid h-100 w-100 object-fit-cover"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -1177,9 +859,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
