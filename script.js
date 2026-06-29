@@ -111,6 +111,7 @@ loginBtn.addEventListener("click", () => {
 });
 
 // MOBILE BOTTOM NAVIGATION
+// --------------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop();
@@ -121,5 +122,155 @@ document.addEventListener("DOMContentLoaded", () => {
     if (href === currentPage) {
       item.classList.add("active");
     }
+  });
+});
+
+// MOBILE BOTTOM CATEGORY
+
+const sheet = document.getElementById("categorySheet");
+
+const overlay = document.querySelector(".sheet-overlay");
+
+document.getElementById("openCategory").addEventListener("click", openSheet);
+
+document.getElementById("closeSheet").addEventListener("click", closeSheet);
+
+overlay.addEventListener("click", closeSheet);
+
+function openSheet() {
+  sheet.classList.add("show");
+
+  overlay.classList.add("show");
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeSheet() {
+  sheet.classList.remove("show");
+
+  overlay.classList.remove("show");
+
+  document.body.style.overflow = "";
+}
+
+// ==========================================
+// Outlet Page JavaScript
+// ==========================================
+
+document.addEventListener("DOMContentLoaded", () => {
+  /* ===============================
+       Scroll Reveal Animation
+    ================================ */
+
+  const cards = document.querySelectorAll(".outlet-card");
+
+  const reveal = () => {
+    const trigger = window.innerHeight * 0.85;
+
+    cards.forEach((card) => {
+      const top = card.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        card.classList.add("show-card");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", reveal);
+
+  reveal();
+
+  /* ===============================
+       Button Ripple Effect
+    ================================ */
+
+  document.querySelectorAll(".btn").forEach((button) => {
+    button.addEventListener("click", function (e) {
+      const ripple = document.createElement("span");
+
+      ripple.classList.add("ripple");
+
+      const rect = this.getBoundingClientRect();
+
+      ripple.style.left = `${e.clientX - rect.left}px`;
+
+      ripple.style.top = `${e.clientY - rect.top}px`;
+
+      this.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600);
+    });
+  });
+
+  /* ===============================
+       Copy Address
+    ================================ */
+
+  document.querySelectorAll(".copy-address").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const address = this.dataset.address;
+
+      navigator.clipboard.writeText(address);
+
+      this.innerHTML = '<i class="bi bi-check-lg"></i> Copied';
+
+      setTimeout(() => {
+        this.innerHTML = '<i class="bi bi-copy"></i> Copy Address';
+      }, 2000);
+    });
+  });
+
+  /* ===============================
+       Open / Closed Status
+    ================================ */
+
+  const status = document.querySelectorAll(".store-status");
+
+  const hour = new Date().getHours();
+
+  status.forEach((item) => {
+    if (hour >= 10 && hour < 21) {
+      item.innerHTML = "🟢 Open Now";
+
+      item.classList.add("text-success");
+    } else {
+      item.innerHTML = "🔴 Closed";
+
+      item.classList.add("text-danger");
+    }
+  });
+
+  /* ===============================
+       Search Outlet
+    ================================ */
+
+  const search = document.getElementById("outletSearch");
+
+  if (search) {
+    search.addEventListener("keyup", function () {
+      const value = this.value.toLowerCase();
+
+      cards.forEach((card) => {
+        if (card.innerText.toLowerCase().includes(value)) {
+          card.parentElement.style.display = "block";
+        } else {
+          card.parentElement.style.display = "none";
+        }
+      });
+    });
+  }
+
+  /* ===============================
+       Smooth Scroll
+    ================================ */
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href"))?.scrollIntoView({
+        behavior: "smooth",
+      });
+    });
   });
 });
