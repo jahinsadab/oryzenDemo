@@ -376,7 +376,7 @@ iframe {
   background: #fff;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   padding: 0 15px;
@@ -445,6 +445,9 @@ iframe {
   padding: 10px 22px;
   border-radius: 10px;
   font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-btn {
@@ -466,8 +469,8 @@ iframe {
 
 .mobile-menu-list li a {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center;
+  justify-content: space-between; */
 
   padding: 16px;
 
@@ -695,6 +698,24 @@ iframe {
   .hero-banner img {
     height: 220px;
   }
+}
+
+/* CHAT MODAL */
+
+.modal-content {
+  border-radius: 20px;
+}
+
+.form-control {
+  min-height: 48px;
+}
+
+textarea.form-control {
+  min-height: 120px;
+}
+
+.modal-header h4 {
+  color: #0b1f47;
 }
 
 /* PROMO SECTION */

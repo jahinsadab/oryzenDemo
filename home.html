@@ -890,10 +890,76 @@
           <span>Cart</span>
         </a>
 
-        <a href="chat.html" class="nav-item active">
-          <i class="bi bi-chat"></i>
+        <!-- Chat Button -->
+        <button
+          class="btn d-flex flex-column"
+          data-bs-toggle="modal"
+          data-bs-target="#chatModal"
+        >
+          <i class="bi bi-chat-dots-fill"></i>
           <span>Chat</span>
-        </a>
+        </button>
+
+        <!-- Chat Modal -->
+
+        <div class="modal fade" id="chatModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4">
+              <!-- Header -->
+
+              <div class="modal-header border-0 flex-column position-relative">
+                <button
+                  class="btn-close position-absolute top-0 end-0 m-3"
+                  data-bs-dismiss="modal"
+                ></button>
+
+                <h4 class="fw-bold mt-3 mb-1">FABRILIFE</h4>
+
+                <p class="text-secondary mb-0">Customer Support Desk</p>
+              </div>
+
+              <!-- Body -->
+
+              <div class="modal-body px-4">
+                <!-- Name -->
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold"> Name </label>
+
+                  <input type="text" class="form-control" />
+                </div>
+
+                <!-- Message -->
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold"> Message </label>
+
+                  <textarea rows="4" class="form-control"> </textarea>
+                </div>
+
+                <!-- Phone -->
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"> Phone </label>
+
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="text-end">
+                  <button class="btn btn-dark px-4">CHAT WITH US</button>
+                </div>
+              </div>
+
+              <!-- Footer -->
+
+              <div class="modal-footer justify-content-center border-0">
+                <small class="text-secondary">
+                  © Copyright Fabrilife Limited, 2021
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <a href="signin.html" class="nav-item">
           <i class="bi bi-person"></i>
