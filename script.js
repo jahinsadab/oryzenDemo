@@ -274,3 +274,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// TRACK ORDER PAGE
+// ========================
+
+const form = document.getElementById("trackForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Replace this with your API request
+
+  alert("Track Order button clicked!");
+});
+
+// FOOTER
+// ==================
+
+const newsletterForm = document.querySelector(".footer form");
+
+newsletterForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = this.querySelector("input").value.trim();
+
+  if (email === "") {
+    alert("Please enter your email.");
+
+    return;
+  }
+
+  alert("Thanks for subscribing!");
+
+  this.reset();
+});

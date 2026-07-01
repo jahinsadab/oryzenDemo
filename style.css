@@ -1514,3 +1514,38 @@ body {
 .error {
   color: #dc3545;
 }
+
+/* TRACK ORDER PAGE */
+/* ============================= */
+
+body {
+  background: #fff;
+}
+
+.form-control {
+  height: 48px;
+}
+
+.promo-box {
+  background: #d9ffd8;
+
+  border-radius: 8px;
+
+  font-size: 18px;
+}
+
+.store-btn {
+  max-width: 180px;
+
+  width: 100%;
+
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .promo-box {
+    font-size: 15px;
+
+    padding: 18px;
+  }
+}
