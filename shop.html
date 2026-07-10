@@ -2,126 +2,2972 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Fabrilife Clone</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop | Oryzen</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/sidebar.css" />
-    <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <!-- Desktop Header -->
+    <!-- MENU MODAL POPUP -->
+    <!-- ====================================== -->
 
-    <header class="desktop-header d-none d-lg-block">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="#"> FABRILIFE </a>
+    <!-- HEADER SECTION -->
+    <!-- ======================================= -->
 
-          <form class="search-box mx-auto">
-            <input class="form-control" placeholder="Search products" />
-          </form>
+    <section class="header-section">
+      <nav class="navbar navbar-expand-xl oryzen-navbar">
+        <div class="container">
+          <!-- Mobile Header -->
+          <div class="mobile-header d-xl-none">
+            <!-- Hamburger -->
+            <button
+              class="btn mobile-menu-btn"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <i class="bi bi-list"></i>
+            </button>
 
-          <div class="header-icons">
-            <a href="#"><i class="bi bi-heart"></i></a>
+            <!-- Logo -->
+            <a href="home.html" class="mobile-logo">
+              <img src="/pics/logo.png" alt="" />
+            </a>
 
-            <a href="#"><i class="bi bi-cart3"></i></a>
+            <!-- Icons -->
+            <div class="mobile-icons">
+              <a href="#">
+                <i class="bi bi-search"></i>
+              </a>
 
-            <a href="#"><i class="bi bi-person"></i></a>
+              <a href="#">
+                <i class="bi bi-heart"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <a class="desktop-navbar navbar-brand" href="home.html">
+            <img src="/pics/logo.png" alt="Logo" />
+          </a>
+
+          <div
+            class="offcanvas offcanvas-start mobile-sidebar"
+            tabindex="-1"
+            id="mobileMenu"
+          >
+            <!-- Top -->
+            <div class="mobile-top">
+              <div>
+                <h5>Welcome to Fabrilife</h5>
+
+                <div class="auth-buttons">
+                  <a href="#" class="login-btn"> Login </a>
+
+                  <a href="#" class="register-btn"> Register </a>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+              ></button>
+            </div>
+
+            <!-- Body -->
+            <div class="offcanvas-body p-0">
+              <ul class="mobile-menu-list">
+                <li>
+                  <a href="#">
+                    <i class="bi bi-house-fill"></i>
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-grid-fill"></i>
+                    Shop All
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-star-fill"></i>
+                    New Arrivals
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-truck"></i>
+                    Free Delivery
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-fire"></i>
+                    Top Selling
+                  </a>
+                </li>
+              </ul>
+
+              <div class="menu-divider"></div>
+
+              <h6 class="mobile-heading">CATEGORIES</h6>
+
+              <ul class="mobile-menu-list">
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="bi bi-person-standing"></i>
+                      Men's Collection
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="bi bi-person-standing-dress"></i>
+                      Women's Collection
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="bi bi-person"></i>
+                      Kids Collection
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>
+                      <i class="bi bi-mortarboard-fill"></i>
+                      Teens Collection
+                    </span>
+
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="menu-divider"></div>
+
+              <h6 class="mobile-heading">MY ACCOUNT</h6>
+
+              <ul class="mobile-menu-list">
+                <li>
+                  <a href="#">
+                    <i class="bi bi-heart-fill"></i>
+                    My Wishlist
+                  </a>
+                </li>
+              </ul>
+
+              <div class="menu-divider"></div>
+
+              <ul class="mobile-menu-list">
+                <li>
+                  <a href="#">
+                    <i class="bi bi-truck"></i>
+                    Track Order
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-telephone-fill"></i>
+                    Contact Us
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    Store Locations
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <!-- Main Menu -->
+            <ul class="navbar-nav menu-links">
+              <!-- MEN -->
+              <li class="nav-item dropdown mega-dropdown">
+                <a
+                  class="nav-link active-menu"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                >
+                  MEN
+                </a>
+
+                <!-- Mega Menu -->
+                <div class="dropdown-menu mega-menu">
+                  <div class="container-fluid p-0">
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <h6>TOPWEAR</h6>
+
+                            <a href="#">Half Sleeve T-shirt</a>
+                            <a href="#">Full Sleeve T-shirt</a>
+                            <a href="#">Polo T-shirt</a>
+                            <a href="#">Shirt</a>
+                            <a href="#">Panjabi</a>
+                            <a href="#">Hoodie</a>
+                            <a href="#">Jacket</a>
+                            <a href="#">Sweatshirt</a>
+                          </div>
+
+                          <div class="col-md-4">
+                            <h6>BOTTOMWEAR</h6>
+
+                            <a href="#">Comfy Trouser</a>
+                            <a href="#">Sports Trouser</a>
+                            <a href="#">Jeans</a>
+                            <a href="#">Joggers</a>
+                            <a href="#">Cargo Pants</a>
+                            <a href="#">Chino Pants</a>
+                            <a href="#">Shorts</a>
+                            <a href="#">Pajama</a>
+                          </div>
+
+                          <div class="col-md-4">
+                            <h6>ACCESSORIES</h6>
+
+                            <a href="#">Face Mask</a>
+                            <a href="#">Underwear</a>
+                            <a href="#">Socks</a>
+                            <a href="#">Wallet</a>
+                            <a href="#">Cap</a>
+                            <a href="#">Belt</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Products -->
+                      <div class="col-lg-5">
+                        <div class="products-column">
+                          <h6>NEW ARRIVALS</h6>
+
+                          <div class="row g-3">
+                            <div class="col-6">
+                              <img src="images/p1.jpg" />
+                            </div>
+
+                            <div class="col-6">
+                              <img src="images/p2.jpg" />
+                            </div>
+
+                            <div class="col-6">
+                              <img src="images/p3.jpg" />
+                            </div>
+
+                            <div class="col-6">
+                              <img src="images/p4.jpg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mega-footer">
+                      <a href="#"> View All Men → </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown mega-dropdown">
+                <a class="nav-link" href="#" data-bs-toggle="dropdown">WOMEN</a>
+                <div class="dropdown-menu mega-menu">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <h6>TOPWEAR</h6>
+
+                            <a href="#">Half Sleeve T-shirt</a>
+                            <a href="#">Full Sleeve T-shirt</a>
+                            <a href="#">Polo T-shirt</a>
+                            <a href="#">Shirt</a>
+                            <a href="#">Panjabi</a>
+                            <a href="#">Hoodie</a>
+                            <a href="#">Jacket</a>
+                            <a href="#">Sweatshirt</a>
+                          </div>
+
+                          <div class="col-md-4">
+                            <h6>BOTTOMWEAR</h6>
+
+                            <a href="#">Comfy Trouser</a>
+                            <a href="#">Sports Trouser</a>
+                            <a href="#">Jeans</a>
+                            <a href="#">Joggers</a>
+                            <a href="#">Cargo Pants</a>
+                            <a href="#">Chino Pants</a>
+                            <a href="#">Shorts</a>
+                            <a href="#">Pajama</a>
+                          </div>
+
+                          <div class="col-md-4">
+                            <h6>ACCESSORIES</h6>
+
+                            <a href="#">Face Mask</a>
+                            <a href="#">Underwear</a>
+                            <a href="#">Socks</a>
+                            <a href="#">Wallet</a>
+                            <a href="#">Cap</a>
+                            <a href="#">Belt</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Products -->
+                      <div class="col-lg-5">
+                        <div class="products-column">
+                          <h6>NEW ARRIVALS</h6>
+
+                          <div class="row g-3">
+                            <div class="col-6">
+                              <img src="images/p1.jpg" />
+                            </div>
+
+                            <div class="col-6">
+                              <img src="images/p2.jpg" />
+                            </div>
+
+                            <div class="col-6">
+                              <img src="images/p3.jpg" />
+                            </div>
+
+                            <div class="col-6">
+                              <img src="images/p4.jpg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mega-footer">
+                      <a href="#"> View All Men → </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown mega-dropdown">
+                <a class="nav-link" href="#">TEENS</a>
+                <div class="dropdown-menu mega-menu">
+                  <div class="row">
+                    <div class="col-lg-7">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6>TOPWEAR</h6>
+
+                          <a href="#">Half Sleeve T-shirt</a>
+                          <a href="#">Full Sleeve T-shirt</a>
+                          <a href="#">Polo T-shirt</a>
+                          <a href="#">Shirt</a>
+                          <a href="#">Panjabi</a>
+                          <a href="#">Hoodie</a>
+                          <a href="#">Jacket</a>
+                          <a href="#">Sweatshirt</a>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h6>BOTTOMWEAR</h6>
+
+                          <a href="#">Comfy Trouser</a>
+                          <a href="#">Sports Trouser</a>
+                          <a href="#">Jeans</a>
+                          <a href="#">Joggers</a>
+                          <a href="#">Cargo Pants</a>
+                          <a href="#">Chino Pants</a>
+                          <a href="#">Shorts</a>
+                          <a href="#">Pajama</a>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h6>ACCESSORIES</h6>
+
+                          <a href="#">Face Mask</a>
+                          <a href="#">Underwear</a>
+                          <a href="#">Socks</a>
+                          <a href="#">Wallet</a>
+                          <a href="#">Cap</a>
+                          <a href="#">Belt</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-lg-5">
+                      <div class="products-column">
+                        <h6>NEW ARRIVALS</h6>
+
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <img src="images/p1.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p2.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p3.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p4.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mega-footer">
+                    <a href="#"> View All Men → </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown mega-dropdown">
+                <a class="nav-link" href="#">KIDS</a>
+                <div class="dropdown-menu mega-menu">
+                  <div class="row">
+                    <div class="col-lg-7">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6>TOPWEAR</h6>
+
+                          <a href="#">Half Sleeve T-shirt</a>
+                          <a href="#">Full Sleeve T-shirt</a>
+                          <a href="#">Polo T-shirt</a>
+                          <a href="#">Shirt</a>
+                          <a href="#">Panjabi</a>
+                          <a href="#">Hoodie</a>
+                          <a href="#">Jacket</a>
+                          <a href="#">Sweatshirt</a>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h6>BOTTOMWEAR</h6>
+
+                          <a href="#">Comfy Trouser</a>
+                          <a href="#">Sports Trouser</a>
+                          <a href="#">Jeans</a>
+                          <a href="#">Joggers</a>
+                          <a href="#">Cargo Pants</a>
+                          <a href="#">Chino Pants</a>
+                          <a href="#">Shorts</a>
+                          <a href="#">Pajama</a>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h6>ACCESSORIES</h6>
+
+                          <a href="#">Face Mask</a>
+                          <a href="#">Underwear</a>
+                          <a href="#">Socks</a>
+                          <a href="#">Wallet</a>
+                          <a href="#">Cap</a>
+                          <a href="#">Belt</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-lg-5">
+                      <div class="products-column">
+                        <h6>NEW ARRIVALS</h6>
+
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <img src="images/p1.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p2.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p3.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p4.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mega-footer">
+                    <a href="#"> View All Men → </a>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown mega-dropdown">
+                <a class="nav-link" href="#">SPORTS</a>
+                <div class="dropdown-menu mega-menu">
+                  <div class="row">
+                    <div class="col-lg-7">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <h6>TOPWEAR</h6>
+
+                          <a href="#">Half Sleeve T-shirt</a>
+                          <a href="#">Full Sleeve T-shirt</a>
+                          <a href="#">Polo T-shirt</a>
+                          <a href="#">Shirt</a>
+                          <a href="#">Panjabi</a>
+                          <a href="#">Hoodie</a>
+                          <a href="#">Jacket</a>
+                          <a href="#">Sweatshirt</a>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h6>BOTTOMWEAR</h6>
+
+                          <a href="#">Comfy Trouser</a>
+                          <a href="#">Sports Trouser</a>
+                          <a href="#">Jeans</a>
+                          <a href="#">Joggers</a>
+                          <a href="#">Cargo Pants</a>
+                          <a href="#">Chino Pants</a>
+                          <a href="#">Shorts</a>
+                          <a href="#">Pajama</a>
+                        </div>
+
+                        <div class="col-md-4">
+                          <h6>ACCESSORIES</h6>
+
+                          <a href="#">Face Mask</a>
+                          <a href="#">Underwear</a>
+                          <a href="#">Socks</a>
+                          <a href="#">Wallet</a>
+                          <a href="#">Cap</a>
+                          <a href="#">Belt</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Products -->
+                    <div class="col-lg-5">
+                      <div class="products-column">
+                        <h6>NEW ARRIVALS</h6>
+
+                        <div class="row g-3">
+                          <div class="col-6">
+                            <img src="images/p1.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p2.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p3.jpg" />
+                          </div>
+
+                          <div class="col-6">
+                            <img src="images/p4.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mega-footer">
+                    <a href="#"> View All Men → </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Search -->
+            <form class="search-box ms-auto">
+              <input type="text" placeholder="Search" />
+            </form>
+
+            <!-- Right Icons -->
+            <div class="header-icons">
+              <a href="stores.html">
+                <i class="bi bi-geo-alt"></i>
+                <span>Stores</span>
+              </a>
+
+              <!-- Profile -->
+              <div class="dropdown profile-dropdown">
+                <a href="#" data-bs-toggle="dropdown">
+                  <i class="bi bi-person"></i>
+                  <span>Profile</span>
+                </a>
+
+                <div class="dropdown-menu profile-menu">
+                  <div class="welcome">
+                    <p>Welcome</p>
+
+                    <a href="signin.html">Sign in</a>
+                    /
+                    <a href="#">Sign up</a>
+                  </div>
+
+                  <hr />
+
+                  <a href="track_order.html">
+                    <i class="bi bi-truck"></i>
+                    Track Order
+                  </a>
+
+                  <a href="#">
+                    <i class="bi bi-building"></i>
+                    Corporate Sales
+                  </a>
+
+                  <a href="#">
+                    <i class="bi bi-info-circle-fill"></i>
+                    About Us
+                  </a>
+                </div>
+              </div>
+
+              <a href="#">
+                <i class="bi bi-heart"></i>
+                <span>Wishlist</span>
+              </a>
+
+              <a href="#">
+                <i class="bi bi-bag"></i>
+                <span>Bag</span>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
-    </header>
 
-    <!-- Mobile Header -->
+      <!-- Mobile Bottom Navigation -->
+      <nav class="mobile-bottom-nav d-lg-none">
+        <a href="home.html" class="nav-item">
+          <i class="bi bi-house-door"></i>
+          <span>Home</span>
+        </a>
 
-    <header class="mobile-header d-lg-none">
-      <div class="container-fluid">
-        <div class="mobile-top">
-          <button class="icon-btn">
-            <i class="bi bi-list"></i>
-          </button>
+        <!-- Category Offcanvas -->
 
-          <div class="logo">FABRILIFE</div>
+        <button
+          class="btn d-lg-none d-flex flex-column"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#categoryMenu"
+        >
+          <i class="bi bi-grid"></i>
+          <span>Category</span>
+        </button>
 
-          <div>
-            <button class="icon-btn">
-              <i class="bi bi-search"></i>
-            </button>
+        <!-- Mobile Bottom Drawer -->
+        <div
+          class="offcanvas offcanvas-bottom h-auto rounded-top-4"
+          tabindex="-1"
+          id="categoryMenu"
+        >
+          <!-- Top -->
+          <div class="offcanvas-header flex-column pb-2">
+            <!-- Drag Handle -->
+            <div class="drawer-handle mb-3"></div>
 
-            <button class="icon-btn">
-              <i class="bi bi-heart"></i>
-            </button>
+            <div
+              class="w-100 d-flex justify-content-between align-items-center"
+            >
+              <h5 class="fw-bold mb-0">Shop by Category</h5>
+
+              <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+          </div>
+
+          <div class="offcanvas-body pt-0">
+            <!-- Quick Buttons -->
+
+            <div class="row g-3 mb-4">
+              <div class="col-4">
+                <div class="card border-0 shadow-sm text-center py-3">
+                  <i class="bi bi-stars text-success fs-3"></i>
+
+                  <small class="mt-2"> New Arrivals </small>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="card border-0 shadow-sm text-center py-3">
+                  <i class="bi bi-fire text-warning fs-3"></i>
+
+                  <small class="mt-2"> Top Selling </small>
+                </div>
+              </div>
+
+              <div class="col-4">
+                <div class="card border-0 shadow-sm text-center py-3">
+                  <i class="bi bi-truck text-primary fs-3"></i>
+
+                  <small class="mt-2"> Free Delivery </small>
+                </div>
+              </div>
+            </div>
+
+            <small class="text-uppercase text-secondary fw-semibold">
+              All Categories
+            </small>
+
+            <div class="list-group list-group-flush mt-2">
+              <!-- Men's -->
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-primary-subtle text-primary">
+                    <i class="bi bi-person"></i>
+                  </div>
+
+                  <div class="ms-3">
+                    <div class="fw-semibold">Men's Collection</div>
+
+                    <small class="text-muted"> T-Shirts, Polos, Hoodies </small>
+                  </div>
+                </div>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+
+              <!-- Women -->
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-danger-subtle text-danger">
+                    <i class="bi bi-person-standing-dress"></i>
+                  </div>
+
+                  <div class="ms-3">
+                    <div class="fw-semibold">Women's Collection</div>
+
+                    <small class="text-muted"> Kurti, Tops, Dresses </small>
+                  </div>
+                </div>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+
+              <!-- Kids -->
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-warning-subtle text-warning">
+                    <i class="bi bi-emoji-smile"></i>
+                  </div>
+
+                  <div class="ms-3">
+                    <div class="fw-semibold">Kids Collection</div>
+
+                    <small class="text-muted"> Boys & Girls Clothing </small>
+                  </div>
+                </div>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+
+              <!-- Teens -->
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-success-subtle text-success">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+
+                  <div class="ms-3">
+                    <div class="fw-semibold">Teens Collection</div>
+
+                    <small class="text-muted"> Teen Boys & Girls </small>
+                  </div>
+                </div>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+
+              <!-- Sports -->
+
+              <a
+                href="#"
+                class="list-group-item list-group-item-action d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center">
+                  <div class="icon-box bg-warning-subtle text-warning">
+                    <i class="bi bi-dribbble"></i>
+                  </div>
+
+                  <div class="ms-3">
+                    <div class="fw-semibold">Sports Collection</div>
+
+                    <small class="text-muted"> Jerseys & Activewear </small>
+                  </div>
+                </div>
+
+                <i class="bi bi-chevron-right"></i>
+              </a>
+            </div>
+
+            <div class="mt-4">
+              <a
+                href="#"
+                class="btn btn-primary w-100 d-flex justify-content-between align-items-center py-3"
+              >
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-grid-fill fs-4 me-3"></i>
+
+                  <div class="text-start">
+                    <div>View All Products</div>
+
+                    <small> Browse entire catalog </small>
+                  </div>
+                </div>
+
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart link -->
+
+        <a href="cart.html" class="nav-item">
+          <div class="position-relative">
+            <i class="bi bi-cart3"></i>
+
+            <span class="cart-badge">3</span>
+          </div>
+
+          <span>Cart</span>
+        </a>
+
+        <!-- Chat Button -->
+        <button
+          class="btn d-flex flex-column"
+          data-bs-toggle="modal"
+          data-bs-target="#chatModal"
+        >
+          <i class="bi bi-chat-dots-fill"></i>
+          <span>Chat</span>
+        </button>
+
+        <!-- Chat Modal -->
+
+        <div class="modal fade" id="chatModal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4">
+              <!-- Header -->
+
+              <div class="modal-header border-0 flex-column position-relative">
+                <button
+                  class="btn-close position-absolute top-0 end-0 m-3"
+                  data-bs-dismiss="modal"
+                ></button>
+
+                <h4 class="fw-bold mt-3 mb-1">FABRILIFE</h4>
+
+                <p class="text-secondary mb-0">Customer Support Desk</p>
+              </div>
+
+              <!-- Body -->
+
+              <div class="modal-body px-4">
+                <!-- Name -->
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold"> Name </label>
+
+                  <input type="text" class="form-control" />
+                </div>
+
+                <!-- Message -->
+
+                <div class="mb-3">
+                  <label class="form-label fw-semibold"> Message </label>
+
+                  <textarea rows="4" class="form-control"> </textarea>
+                </div>
+
+                <!-- Phone -->
+
+                <div class="mb-4">
+                  <label class="form-label fw-semibold"> Phone </label>
+
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="text-end">
+                  <button class="btn btn-dark px-4">CHAT WITH US</button>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+
+              <div class="modal-footer justify-content-center border-0">
+                <small class="text-secondary">
+                  © Copyright Fabrilife Limited, 2021
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="signin.html" class="nav-item">
+          <i class="bi bi-person"></i>
+          <span>Login</span>
+        </a>
+      </nav>
+    </section>
+
+    <section class="shop-section">
+      <div class="container-fluid ps-5 pe-5">
+        <div class="row g-4">
+          <!-- ============LEFT SIDEBAR================= -->
+
+          <div class="col-lg-3">
+            <div class="bg-white rounded shadow-sm h-100">
+              <!-- OFFER -->
+
+              <div class="p-3 border-bottom">
+                <h6 class="text-danger fw-bold mb-3">Special Offers</h6>
+
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-3">
+                    <a href="" class="text-decoration-none text-reset">
+                      <i class="bi bi-lightning-charge-fill text-warning"></i>
+                      Mega Deal
+                    </a>
+                  </li>
+
+                  <li class="mb-3">
+                    <a href="" class="text-decoration-none text-reset">
+                      <i class="bi bi-lightning-charge-fill text-warning"></i>
+                      New Arrival
+                    </a>
+                  </li>
+
+                  <li class="mb-3">
+                    <a href="" class="text-decoration-none text-reset">
+                      <i class="bi bi-lightning-charge-fill text-warning"></i>
+                      Top Selling
+                    </a>
+                  </li>
+
+                  <li class="mb-3">
+                    <a href="" class="text-decoration-none text-reset">
+                      <i class="bi bi-lightning-charge-fill text-warning"></i>
+                      Free Delivery
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="" class="text-decoration-none text-reset">
+                      <i class="bi bi-lightning-charge-fill text-warning"></i>
+                      Merchandise
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- CATEGORY -->
+
+              <div class="p-3 border-bottom d-flex justify-content-between">
+                <h6 class="mb-0">Categories</h6>
+
+                <a href="#" class="small text-danger text-decoration-none">
+                  Clear
+                </a>
+              </div>
+
+              <div class="sidebar-scroll">
+                <div class="accordion accordion-flush" id="categoryAccordion">
+                  <!-- MEN -->
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#men"
+                      >
+                        Mens
+
+                        <span
+                          class="badge bg-primary rounded-pill ms-auto me-3"
+                        >
+                          1260
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div id="men" class="accordion-collapse collapse show">
+                      <div class="accordion-body p-0">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Half Sleeve T-shirt
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                351
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Full Sleeve T-shirt
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                143
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Maggie
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                6
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Shirt
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                72
+                              </span>
+                            </a>
+                          </li>
+
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Polo T-shirt
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                149
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Hoodie
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                30
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Jacket
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                30
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Joggers
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                17
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Sweatshirt
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                15
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Comfy Trouser
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                48
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Sports Trouser
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                22
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Shorts
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                39
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Underwear
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                54
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Socks
+
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                36
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Panjabi
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                143
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Tupi
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                5
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Jeans
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                20
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Pajama
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                5
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Accesorries
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                51
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Chino Pants
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                12
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Cargo Pants
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                19
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Formal Pants
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                6
+                              </span>
+                            </a>
+                          </li>
+                          <li class="list-group-item">
+                            <a
+                              href=""
+                              class="d-flex justify-content-between text-reset text-decoration-none"
+                            >
+                              Waistcoats
+                              <span
+                                class="badge bg-light text-dark rounded-pill"
+                              >
+                                2
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WOMEN -->
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#women"
+                      >
+                        Women
+
+                        <span class="badge bg-danger rounded-pill ms-auto me-3">
+                          920
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div id="women" class="accordion-collapse collapse">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Half Sleeve T-shirt
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              351
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Full Sleeve T-shirt
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              143
+                            </span>
+                          </a>
+                        </li>
+
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Maggie
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              6
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Shirt
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              72
+                            </span>
+                          </a>
+                        </li>
+
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Polo T-shirt
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              149
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Hoodie
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              30
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Jacket
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              30
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Joggers
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              17
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Sweatshirt
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              15
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Comfy Trouser
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              48
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Sports Trouser
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              22
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Shorts
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              39
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Underwear
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              54
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Socks
+
+                            <span class="badge bg-light text-dark rounded-pill">
+                              36
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Panjabi
+                            <span class="badge bg-light text-dark rounded-pill">
+                              143
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Tupi
+                            <span class="badge bg-light text-dark rounded-pill">
+                              5
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Jeans
+                            <span class="badge bg-light text-dark rounded-pill">
+                              20
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Pajama
+                            <span class="badge bg-light text-dark rounded-pill">
+                              5
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Accesorries
+                            <span class="badge bg-light text-dark rounded-pill">
+                              51
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Chino Pants
+                            <span class="badge bg-light text-dark rounded-pill">
+                              12
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Cargo Pants
+                            <span class="badge bg-light text-dark rounded-pill">
+                              19
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Formal Pants
+                            <span class="badge bg-light text-dark rounded-pill">
+                              6
+                            </span>
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a
+                            href=""
+                            class="d-flex justify-content-between text-reset text-decoration-none"
+                          >
+                            Waistcoats
+                            <span class="badge bg-light text-dark rounded-pill">
+                              2
+                            </span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- KIDS -->
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#kids"
+                      >
+                        Kids
+
+                        <span
+                          class="badge bg-success rounded-pill ms-auto me-3"
+                        >
+                          460
+                        </span>
+                      </button>
+                    </h2>
+
+                    <div id="kids" class="accordion-collapse collapse">
+                      <div class="accordion-body">Category List</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================RIGHT================= -->
+
+          <div class="col-lg-9">
+            <!-- SEARCH -->
+
+            <div class="card border-0">
+              <div class="card-body">
+                <div class="input-group">
+                  <span class="input-group-text bg-white border-end-0">
+                    <i class="bi bi-search"></i>
+                  </span>
+
+                  <input
+                    type="text"
+                    id="searchInput"
+                    class="form-control border-start-0"
+                    placeholder="Search a product"
+                  />
+                </div>
+
+                <!-- GENDER -->
+
+                <div>
+                  <ul
+                    class="nav d-flex flex-row flex-nowrap align-items-center"
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <li class="nav-item btn btn-light" role="presentation">
+                      <button
+                        class="btn btn-secondary btn-sm w-100 px-1 py-1 text-truncate"
+                        id="pills-men-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-men"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-men"
+                        aria-selected="true"
+                      >
+                        <i class="bi bi-person-fill"></i>
+                        Men
+                      </button>
+                    </li>
+                    <li class="nav-item btn btn-light" role="presentation">
+                      <button
+                        class="btn btn-secondary btn-sm w-100 px-1 py-1 text-truncate"
+                        id="pills-women-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-women"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-women"
+                        aria-selected="true"
+                      >
+                        <i class="bi bi-person-fill"></i>
+                        Women
+                      </button>
+                    </li>
+                    <li class="nav-item btn btn-light" role="presentation">
+                      <button
+                        class="btn btn-secondary btn-sm w-100 px-1 py-1 text-truncate"
+                        id="pills-kids-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-kids"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-kids"
+                        aria-selected="true"
+                      >
+                        <i class="bi bi-person-fill"></i>
+                        Kids
+                      </button>
+                    </li>
+                    <li class="nav-item btn btn-light" role="presentation">
+                      <button
+                        class="btn btn-secondary btn-sm w-100 px-1 py-1 text-truncate"
+                        id="pills-teens-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-teens"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-teens"
+                        aria-selected="true"
+                      >
+                        <i class="bi bi-person-fill"></i>
+                        Teens
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <hr />
+
+                <!-- FILTER CHIPS -->
+              </div>
+            </div>
+
+            <!-- products-men  -->
+
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-men"
+                role="tabpanel"
+                aria-labelledby="pills-men-tab"
+                tabindex="0"
+              >
+                <div class="mb-5">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Half Sleeve T-shirt
+                      <span class="text-secondary small">348</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Full Sleeve T-shirt
+                      <span class="text-secondary small">143</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Maggie
+                      <span class="text-secondary small">6</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Shirt
+                      <span class="text-secondary small">72</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Polo T-shirt
+                      <span class="text-secondary small">147</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Hoodie
+                      <span class="text-secondary small">30</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Jacket
+                      <span class="text-secondary small">30</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Joggers
+                      <span class="text-secondary small">17</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Sweatshirt
+                      <span class="text-secondary small">15</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Comfy Trouser
+                      <span class="text-secondary small">48</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Sports Trouser
+                      <span class="text-secondary small">22</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Shorts
+                      <span class="text-secondary small">38</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Underwear
+                      <span class="text-secondary small">54</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Socks
+                      <span class="text-secondary small">36</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Panjabi
+                      <span class="text-secondary small">143</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Tupi
+                      <span class="text-secondary small">5</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Jeans
+                      <span class="text-secondary small">20</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Pajama
+                      <span class="text-secondary small">5</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Accessories
+                      <span class="text-secondary small">48</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Chino Pants
+                      <span class="text-secondary small">12</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Cargo Pants
+                      <span class="text-secondary small">19</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Formal Pants
+                      <span class="text-secondary small">6</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Waistcoats
+                      <span class="text-secondary small">2</span>
+                    </button>
+                  </div>
+
+                  <!-- SELECTED -->
+
+                  <div class="mt-4 d-flex gap-3 align-items-center">
+                    <span class="badge bg-secondary p-3">
+                      Mens
+
+                      <i class="bi bi-x-lg ms-2"></i>
+                    </span>
+
+                    <a href="#" class="text-danger"> Clear </a>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="row row-cols-1 row-cols-md-4 g-5">
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- </div> -->
+                    <div class="col">
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show"
+                id="pills-women"
+                role="tabpanel"
+                aria-labelledby="pills-women-tab"
+                tabindex="0"
+              >
+                <div class="mb-5">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      T-shirt
+                      <span class="text-secondary small">27</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Comfy Trouser
+                      <span class="text-secondary small">19</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Kurti tunic And Tops
+                      <span class="text-secondary small">64</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Pajamas
+                      <span class="text-secondary small">12</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Pants
+                      <span class="text-secondary small">5</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Palazzo
+                      <span class="text-secondary small">6</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Leggings
+                      <span class="text-secondary small">7</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Hoodie
+                      <span class="text-secondary small">1</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Sweatshirt
+                      <span class="text-secondary small">2</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Cargo Pants
+                      <span class="text-secondary small">1</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Shrug
+                      <span class="text-secondary small">5</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Co-ords
+                      <span class="text-secondary small">10</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Tops
+                      <span class="text-secondary small">2</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Kurti
+                      <span class="text-secondary small">10</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      2pc Salwar Kameez
+                      <span class="text-secondary small">8</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      3pc Slwar Kameez
+                      <span class="text-secondary small">13</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Denim Pants
+                      <span class="text-secondary small">1</span>
+                    </button>
+                  </div>
+
+                  <!-- SELECTED -->
+
+                  <div class="mt-4 d-flex gap-3 align-items-center">
+                    <span class="badge bg-secondary p-3">
+                      Womens
+
+                      <i class="bi bi-x-lg ms-2"></i>
+                    </span>
+
+                    <a href="#" class="text-danger"> Clear </a>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="row row-cols-1 row-cols-md-4 g-5">
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show"
+                id="pills-kids"
+                role="tabpanel"
+                aria-labelledby="pills-kids-tab"
+                tabindex="0"
+              >
+                <div class="mb-5">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Boys
+                      <span class="text-secondary small">201</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Girls
+                      <span class="text-secondary small">130</span>
+                    </button>
+                  </div>
+
+                  <!-- SELECTED -->
+
+                  <div class="mt-4 d-flex gap-3 align-items-center">
+                    <span class="badge bg-secondary p-3">
+                      Kids
+
+                      <i class="bi bi-x-lg ms-2"></i>
+                    </span>
+
+                    <a href="#" class="text-danger"> Clear </a>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="row row-cols-1 row-cols-md-4 g-5">
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show"
+                id="pills-teens"
+                role="tabpanel"
+                aria-labelledby="pills-teens-tab"
+                tabindex="0"
+              >
+                <div class="mb-5">
+                  <div class="d-flex flex-wrap gap-2">
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Boys
+                      <span class="text-secondary small">38</span>
+                    </button>
+                    <button
+                      class="btn btn-light border rounded-pill category-chip"
+                      data-category="Shorts"
+                    >
+                      Girls
+                      <span class="text-secondary small">34</span>
+                    </button>
+                  </div>
+
+                  <!-- SELECTED -->
+
+                  <div class="mt-4 d-flex gap-3 align-items-center">
+                    <span class="badge bg-secondary p-3">
+                      Teens
+
+                      <i class="bi bi-x-lg ms-2"></i>
+                    </span>
+
+                    <a href="#" class="text-danger"> Clear </a>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="row row-cols-1 row-cols-md-4 g-5">
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <!-- <div class="container py-5"> -->
+                      <div class="product-card">
+                        <!-- Product Image -->
+
+                        <div class="product-image">
+                          <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+                            class="img-fluid"
+                            alt=""
+                          />
+
+                          <!-- Discount -->
+
+                          <span class="discount-badge"> -16% </span>
+
+                          <!-- Search -->
+
+                          <button class="quick-view">
+                            <i class="bi bi-search"></i>
+                          </button>
+
+                          <!-- Slider Dots -->
+
+                          <div class="slider-dots">
+                            <span class="active"></span>
+
+                            <span></span>
+
+                            <span></span>
+                          </div>
+                        </div>
+
+                        <!-- Card Body -->
+
+                        <div class="card-body-custom">
+                          <button class="wishlist">
+                            <i class="bi bi-heart"></i>
+                          </button>
+
+                          <h6 class="product-title">
+                            Premium Double PK Cotton Polo - Green
+                          </h6>
+
+                          <div class="save-badge">
+                            <i class="bi bi-tag-fill"></i>
+
+                            Save ৳200
+                          </div>
+
+                          <div class="price-area">
+                            <div>
+                              <span class="price"> ৳1090 </span>
+
+                              <span class="old-price"> ৳1290 </span>
+
+                              <span class="discount-text"> -16% </span>
+                            </div>
+
+                            <button class="cart-btn">
+                              <i class="bi bi-cart-plus-fill"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- Main -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Sidebar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-        <div class="col-lg-3 sidebar d-none d-lg-block">Sidebar Here</div>
-
-        <!-- Products -->
-
-        <div class="col-lg-9 col-12">
-          <div class="content">Search & Products Here</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Navigation -->
-
-    <nav class="mobile-bottom d-lg-none">
-      <a class="active">
-        <i class="bi bi-house-door"></i>
-
-        <span>Home</span>
-      </a>
-
-      <a>
-        <i class="bi bi-grid"></i>
-
-        <span>Category</span>
-      </a>
-
-      <a>
-        <i class="bi bi-cart3"></i>
-
-        <span>Cart</span>
-      </a>
-
-      <a>
-        <i class="bi bi-chat"></i>
-
-        <span>Chat</span>
-      </a>
-
-      <a>
-        <i class="bi bi-person"></i>
-
-        <span>Login</span>
-      </a>
-    </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

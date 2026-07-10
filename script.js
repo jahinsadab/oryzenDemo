@@ -327,3 +327,361 @@ newsletterForm.addEventListener("submit", function (e) {
 
   this.reset();
 });
+
+// SHOP PAGE
+// ==============================
+
+document.querySelectorAll(".btn.rounded-pill").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    console.log(this.innerText);
+  });
+});
+
+// product card interactions
+
+document.querySelectorAll(".cart-btn").forEach((button) => {
+  button.addEventListener("click", function () {
+    this.innerHTML = '<i class="bi bi-check-lg"></i>';
+
+    this.classList.remove("btn-dark");
+
+    this.classList.add("btn-success");
+
+    setTimeout(() => {
+      this.innerHTML = '<i class="bi bi-cart-plus-fill"></i>';
+
+      this.classList.remove("btn-success");
+
+      this.classList.add("btn-dark");
+    }, 1200);
+  });
+});
+
+// ===============================
+// product database
+// ===============================
+
+const products = [
+  {
+    id: 1,
+    gender: "Men",
+    category: "Trouser",
+    title: "Mens Premium Trouser - Ashtrion",
+    price: 990,
+    oldPrice: 1290,
+    image: "https://picsum.photos/500/600?random=11",
+  },
+
+  {
+    id: 2,
+    gender: "Men",
+    category: "T-Shirt",
+    title: "Mens Premium T-Shirt - Eternity",
+    price: 765,
+    oldPrice: 990,
+    image: "https://picsum.photos/500/600?random=12",
+  },
+
+  {
+    id: 3,
+    gender: "Men",
+    category: "T-Shirt",
+    title: "Mens Premium Blank T-Shirt",
+    price: 485,
+    oldPrice: 640,
+    image: "https://picsum.photos/500/600?random=13",
+  },
+
+  {
+    id: 4,
+    gender: "Men",
+    category: "Polo",
+    title: "Premium Designer Polo",
+    price: 1140,
+    oldPrice: 1490,
+    image: "https://picsum.photos/500/600?random=14",
+  },
+
+  {
+    id: 5,
+    gender: "Men",
+    category: "Shorts",
+    title: "Sports Shorts",
+    price: 550,
+    oldPrice: 720,
+    image: "https://picsum.photos/500/600?random=15",
+  },
+
+  {
+    id: 6,
+    gender: "Women",
+    category: "T-Shirt",
+    title: "Women's Oversized Tee",
+    price: 790,
+    oldPrice: 990,
+    image: "https://picsum.photos/500/600?random=16",
+  },
+
+  {
+    id: 7,
+    gender: "Kids",
+    category: "T-Shirt",
+    title: "Kids Cotton T-Shirt",
+    price: 420,
+    oldPrice: 590,
+    image: "https://picsum.photos/500/600?random=17",
+  },
+
+  {
+    id: 8,
+    gender: "Teens",
+    category: "Hoodie",
+    title: "Teen Hoodie",
+    price: 990,
+    oldPrice: 1290,
+    image: "https://picsum.photos/500/600?random=18",
+  },
+
+  {
+    id: 9,
+    gender: "Men",
+    category: "Jeans",
+    title: "Slim Fit Jeans",
+    price: 1390,
+    oldPrice: 1790,
+    image: "images/jeans.jpg",
+  },
+];
+
+// ===============================
+// calculate discount
+// ===============================
+
+function discountPercent(price, oldPrice) {
+  return Math.round(((oldPrice - price) / oldPrice) * 100);
+}
+
+function saveAmount(price, oldPrice) {
+  return oldPrice - price;
+}
+
+// ===============================
+// render products
+// ===============================
+
+function renderProducts(productArray) {
+  const container = document.getElementById("products");
+
+  let html = '<div class="row g-4">';
+
+  productArray.forEach((product) => {
+    html += `
+
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+
+<div class="card product-card border-0 shadow-sm h-100">
+
+<div class="position-relative">
+
+<span class="badge bg-danger discount-badge">
+
+-${discountPercent(product.price, product.oldPrice)}%
+
+</span>
+
+<img src="${product.image}"
+
+class="card-img-top"
+
+alt="${product.title}">
+
+</div>
+
+<div class="card-body d-flex flex-column">
+
+<h6 class="product-title">
+
+${product.title}
+
+</h6>
+
+<span class="badge bg-success align-self-start mb-2">
+
+<i class="bi bi-tag-fill"></i>
+
+Save ৳${saveAmount(product.price, product.oldPrice)}
+
+</span>
+
+<div class="d-flex align-items-center gap-2">
+
+<h4 class="fw-bold mb-0">
+
+৳${product.price}
+
+</h4>
+
+<small class="text-decoration-line-through text-muted">
+
+৳${product.oldPrice}
+
+</small>
+
+<small class="text-danger">
+
+-${discountPercent(product.price, product.oldPrice)}%
+
+</small>
+
+</div>
+
+</div>
+
+<button
+
+class="btn btn-dark rounded-circle cart-btn"
+
+data-id="${product.id}">
+
+<i class="bi bi-cart-plus-fill"></i>
+
+</button>
+
+</div>
+
+</div>
+
+`;
+  });
+
+  html += "</div>";
+
+  container.innerHTML = html;
+
+  attachCartButtons();
+}
+
+// ===============================
+// cart button
+// ===============================
+
+function attachCartButtons() {
+  document
+    .querySelectorAll(".cart-btn")
+
+    .forEach((button) => {
+      button.onclick = function () {
+        this.classList.remove("btn-dark");
+
+        this.classList.add("btn-success");
+
+        this.innerHTML = '<i class="bi bi-check-lg"></i>';
+
+        setTimeout(() => {
+          this.classList.remove("btn-success");
+
+          this.classList.add("btn-dark");
+
+          this.innerHTML = '<i class="bi bi-cart-plus-fill"></i>';
+        }, 1200);
+      };
+    });
+}
+
+// ===============================
+// apply filters
+// ===============================
+
+function applyFilters() {
+  let filtered = [...products];
+
+  // Search
+  if (searchText !== "") {
+    filtered = filtered.filter((product) =>
+      product.title.toLowerCase().includes(searchText.toLowerCase()),
+    );
+  }
+
+  // Gender
+  if (selectedGender !== "") {
+    filtered = filtered.filter((product) => product.gender === selectedGender);
+  }
+
+  // Category
+  if (selectedCategory !== "") {
+    filtered = filtered.filter(
+      (product) => product.category === selectedCategory,
+    );
+  }
+
+  renderProducts(filtered);
+}
+
+// ===============================
+// filter variables
+// ===============================
+
+let selectedGender = "";
+let selectedCategory = "";
+let searchText = "";
+
+applyFilters();
+
+// ===============================
+// live search
+// ===============================
+
+document
+  .getElementById("searchInput")
+
+  .addEventListener("keyup", function () {
+    searchText = this.value;
+
+    applyFilters();
+  });
+
+// ===============================
+// gender buttons
+// ===============================
+
+document.getElementById("btnMen").onclick = function () {
+  selectedGender = "Men";
+
+  applyFilters();
+};
+
+document.getElementById("btnWomen").onclick = function () {
+  selectedGender = "Women";
+
+  applyFilters();
+};
+
+document.getElementById("btnKids").onclick = function () {
+  selectedGender = "Kids";
+
+  applyFilters();
+};
+
+document.getElementById("btnTeens").onclick = function () {
+  selectedGender = "Teens";
+
+  applyFilters();
+};
+
+// ===============================
+// category filter
+// ===============================
+
+document.querySelectorAll(".category-chip")
+
+.forEach(button=>{
+
+button.onclick=function(){
+
+selectedCategory=this.dataset.category;
+
+applyFilters();
+
+};
+
+});
