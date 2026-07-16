@@ -2,6 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   margin: 0;
+  /* padding-bottom: 580px; */
 }
 
 /* MENU MODAL POPUP */
@@ -153,8 +154,18 @@ body {
   display: flex;
   align-items: center;
   margin-left: 40px;
-  gap: 40px;
+  /* gap: 30px; */
 }
+
+.header-icons > a {
+  border: 2px solid transparent;
+}
+
+.header-icons > a:focus-within {
+  border-color: #0000;
+}
+
+
 
 .header-icons > a,
 .profile-dropdown > a {
@@ -313,13 +324,19 @@ body {
 }
 
 .desktop-logo {
-  width: 170px;
-  height: 30px;
+  width: 190px;
+  height: auto;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+.desktop-logo:focus-within {
+  border-color: #000;
 }
 
 .mobile-logo {
   width: 150px;
-  height: 25px;
+  height: auto;
 }
 
 .mobile-icons {
@@ -428,11 +445,6 @@ body {
   height: 1px;
   background: #ececec;
   margin: 12px 16px;
-}
-
-.desktop-navbar:focus {
-  border: 2px solid black;
-  border-radius: 5px;
 }
 
 @media (max-width: 1199px) {
@@ -735,6 +747,13 @@ textarea.form-control {
 
 .event-link {
   background-color: rgb(213, 243, 255);
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.event-link:focus-within {
+  border-top-color: #000;
+  border-bottom-color: #000;
 }
 
 .arrival-heading {
@@ -839,6 +858,16 @@ textarea.form-control {
 
 /* HOME CONTENT */
 /* =================================== */
+
+.new-arrival-link {
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+}
+
+.new-arrival-link:focus-within {
+  border-top-color: #000;
+  border-bottom-color: #000;
+}
 
 .designer-polo a {
   text-decoration: none;
@@ -1285,11 +1314,6 @@ textarea.form-control {
 
 /* LOGIN */
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fff;
-}
-
 .login-box {
   width: 100%;
   max-width: 420px;
@@ -1624,8 +1648,20 @@ body {
   border-color: #0d6efd !important;
 }
 
-/*==================================
-        FOOTER
+/* JOIN SQUAD */
+/* ================================ */
+
+.join-squad {
+  background-image: url("pics/join_squad_pic.png");
+  background-size: contain; /* Stretches image to fit without distortion */
+  background-position: center; /* Centers the image perfectly */
+  background-repeat: no-repeat; /* Prevents tiling/repeating */
+  width: 100%;
+  /* height: 220px; */
+  aspect-ratio: 16 / 9;
+}
+
+/*        FOOTER
 ==================================*/
 
 .footer-section {
@@ -1641,7 +1677,7 @@ body {
 ==========================*/
 
 .footer-logo {
-  width: 48px;
+  /* width: 48px; */
 }
 
 /*=========================
@@ -1838,7 +1874,7 @@ body {
 
 @media (max-width: 991px) {
   .footer-section {
-    text-align: center;
+    text-align: left;
   }
 
   .footer-logo {
@@ -1851,7 +1887,7 @@ body {
   }
 
   .social-icons {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .facebook-card {
@@ -1884,4 +1920,35 @@ body {
   .facebook-card {
     max-width: 100%;
   }
+}
+
+/* WISHLIST PAGE BEFORE */
+/* ===================================== */
+
+.wish-list-section {
+  padding-bottom: 190px;
+}
+
+.wish-list-login-btn {
+  display: inline-block;
+  background-color: #e4871c; /* Royal blue background */
+  color: #ffffff !important; /* Forces white text */
+  padding: 12px 34px; /* Vertical and horizontal spacing */
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 30px; /* Subtle rounded corners */
+  transition: all 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover state changes color and shifts up slightly */
+.wish-list-login-btn:hover {
+  background-color: #f08c19;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.copy-right-section {
+  background-color: whitesmoke;
+  padding: 22px;
 }

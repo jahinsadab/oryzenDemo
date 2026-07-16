@@ -258,17 +258,15 @@
           <div class="d-flex justify-content-around align-items-center">
             <div class="d-flex justify-content-center align-items-center me-5">
               <!-- Logo -->
-
-              <div>
-                <a class="desktop-navbar" href="home.html">
+              <div class="desktop-navbar desktop-logo">
+                <a class=" " href="home.html">
                   <img
-                    class="desktop-logo"
+                    class="img-fluid"
                     src="/pics/header_logo.png"
                     alt="Logo"
                   />
                 </a>
               </div>
-
               <div class="ms-4">
                 <div class="collapse navbar-collapse" id="mainNavbar">
                   <!-- Main Menu -->
@@ -694,16 +692,18 @@
 
               <!-- Right Icons -->
               <div class="header-icons">
-                <a href="stores.html">
+                <a href="stores.html" class="p-3">
                   <i class="bi bi-geo-alt"></i>
                   <span>Stores</span>
                 </a>
 
                 <!-- Profile -->
                 <div class="dropdown profile-dropdown">
-                  <a href="#" data-bs-toggle="dropdown">
-                    <i class="bi bi-person"></i>
-                    <span>Profile</span>
+                  <a href="#" data-bs-toggle="dropdown" class="p-3">
+                    <div class="text-center">
+                      <i class="bi bi-person"></i>
+                      <span>Profile</span>
+                    </div>
                   </a>
 
                   <div class="dropdown-menu profile-menu">
@@ -734,12 +734,12 @@
                   </div>
                 </div>
 
-                <a href="#">
+                <a href="wish_list_be.html" class="p-3">
                   <i class="bi bi-heart"></i>
                   <span>Wishlist</span>
                 </a>
 
-                <a href="#">
+                <a href="#" class="p-3">
                   <i class="bi bi-bag"></i>
                   <span>Bag</span>
                 </a>
@@ -1103,8 +1103,12 @@
         </a>
       </div>
 
-      <div class="arrival-heading text-center mt-2">
-        <h2>NEW ARRIVAL</h2>
+      <div class="arrival-heading text-center mt-2 new-arrival-link">
+        <div>
+          <a class="text-decoration-none" href="">
+            <h2>NEW ARRIVAL</h2>
+          </a>
+        </div>
       </div>
 
       <div class="home-element mt-3">
@@ -2816,7 +2820,7 @@
       </div>
 
       <div
-        class="home-element mt-2"
+        class="home-element bulk-order mt-2"
         style="background-color: rgb(232, 236, 240)"
       >
         <a href="" class="text-decoration-none text-reset">
@@ -2844,6 +2848,23 @@
           </div>
         </a>
       </div>
+
+      <div class="home-element">
+        <div class="row">
+          <div class="col-lg-12">
+            <div>
+              <a href="">
+                <div>EARN MONEY</div>
+                <div>JOIN SQUAD</div>
+                <div>
+                  <i class="bi bi-patch-check-fill text-primary"></i>
+                  An Affiliate Program by Squad
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section></section>
@@ -2851,12 +2872,9 @@
     <!-- FLOATING CHAT BUTTON -->
     <!-- ===================================== -->
 
-
-    <!-- =========================
-        FOOTER START
-========================== -->
+    <!-- ============     FOOTER START========================== -->
     <footer class="footer-section py-5 mt-3">
-      <div class="container">
+      <div class="container px-5">
         <div class="row gy-5">
           <!-- ================= LEFT COLUMN ================= -->
           <div class="col-lg-3 col-md-6">
@@ -2997,7 +3015,7 @@
 
                 <div class="ms-3">
                   <div class="d-flex align-items-center">
-                    <strong> Fabrilife </strong>
+                    <strong> OryzenBD </strong>
 
                     <i class="bi bi-patch-check-fill text-primary ms-2"></i>
 
@@ -3034,9 +3052,15 @@
         </div>
       </div>
     </footer>
-    <!-- =========================
-        FOOTER END
-========================== -->
+
+    <!-- =====  FOOTER END   ========================== -->
+
+    <div class="copy-right-section text-center">
+      <p>
+        Your order is handled daily with a lot of ❤️️ and delivered worldwide!
+      </p>
+      <span>Copyright © 2018 Fabrilife Limited. All Right Reserved</span>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
